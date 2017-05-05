@@ -1,0 +1,2 @@
+module LapSummariesHelper
+end

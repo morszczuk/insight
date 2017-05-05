@@ -1,0 +1,2 @@
+class LapsController < ApplicationController
+end

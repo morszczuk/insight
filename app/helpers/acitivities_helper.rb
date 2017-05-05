@@ -1,0 +1,2 @@
+module AcitivitiesHelper
+end

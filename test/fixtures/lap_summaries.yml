@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lap: one
+  total_time_seconds: 1.5
+  distance_meters: 1.5
+  maximum_speed: 1.5
+  calories: 1.5
+  average_heart_rate_bmp: 1
+  maximum_heart_rate_bmp: 1
+  intensity: MyString
+  cadence: 1
+  trigger_method: MyString
+
+two:
+  lap: two
+  total_time_seconds: 1.5
+  distance_meters: 1.5
+  maximum_speed: 1.5
+  calories: 1.5
+  average_heart_rate_bmp: 1
+  maximum_heart_rate_bmp: 1
+  intensity: MyString
+  cadence: 1
+  trigger_method: MyString
