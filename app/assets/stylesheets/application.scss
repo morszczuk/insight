@@ -14,6 +14,16 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600');
 
+@font-face {
+  font-family: "Slim Joe";
+  src: url(/assets/Slim_Joe.otf) format("truetype");
+}
+
+@font-face {
+  font-family: "Big John";
+  src: url(/assets/Big_John.otf) format("truetype");
+}
+
 $background-color: #1F2421;
 $primary-color: #3BC14A;
 
@@ -106,15 +116,77 @@ header .header-content .header-content-inner p {
   }
 }
 
+$main-header-height: 100px;
+$main-title-height: 200px;
+$form_element_width: 400px;
+$form_element_height: 60px;
+
+.main-header {
+  height: $main-header-height;
+  width: 100%;
+  background-color: $background-color;
+}
+
+.main-title {
+  height: $main-title-height;
+  vertical-align: middle;
+  line-height: $main-title-height;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Slim Joe";
+  color: white;
+}
+
+.main-container {
+  margin: auto;
+  align-content: center;
+  width: $form_element_width;
+}
+
+.main-logo {
+  margin: $main-header-height/4;
+  height: $main-header-height/2;
+}
+
+.new-activity-background {
+  top: 0px;
+  background-image: url('/assets/new_activity.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; 
+  left: 0px;
+  right: 0px;
+  height: 600px;
+}
+
+
 .landing-logo {
     max-width: 80%;
     margin-bottom: 20px;
 }
 
 .btn {
-    margin-top: 30px;
+    margin-top: 100px;
     border-radius: 300px;
     font-size: 30px;
+}
+
+.btn-submit {
+  color: $primary-color;
+  background-color: white;
+  border-color: gray;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+
+  &:hover {
+        background-color: $background-color;
+        color: $primary-color;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: lightgray;
 }
 
 .btn-primary {
@@ -127,10 +199,50 @@ header .header-content .header-content-inner p {
 
   &:hover {
         color: white;
-         background-color: $primary-color;
+        background-color: $primary-color;
   }
 }
 
 .btn-xl {
   padding: 15px 30px;
+}
+
+.main-curved {
+    border-radius: 300px;
+    font-size: 30px;
+    background:transparent;
+    width: $form_element_width;
+    height: $form_element_height;
+    border: 1px solid;
+    border-color: lightgray;
+    color: lightgray;
+}
+
+
+.main-file-upload {
+    font-size: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.main-button-file-upload {
+    z-index: -1;
+    display: inline-block;
+    width: $form_element_width;
+    height: $form_element_height;
+    text-align: left;
+}
+
+.file-input-wrapper {
+    margin-top: 30px;
+    width: $form_element_width;
+    height: $form_element_height;
+    overflow: hidden;
+    position: relative;
+}
+
+.centered_div {
+  margin: 0 auto; text-align: center;
 }
