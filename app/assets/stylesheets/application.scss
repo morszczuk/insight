@@ -16,12 +16,12 @@
 
 @font-face {
   font-family: "Slim Joe";
-  src: url(/assets/Slim_Joe.otf) format("truetype");
+  src: font-url("Slim_Joe.otf") format("truetype");
 }
 
 @font-face {
   font-family: "Big John";
-  src: url(/assets/Big_John.otf) format("truetype");
+  src: font-url("Big_John.otf") format("truetype");
 }
 
 $background-color: #1F2421;
@@ -150,7 +150,7 @@ $form_element_height: 60px;
 
 .new-activity-background {
   top: 0px;
-  background-image: url('/assets/new_activity.jpg');
+  background-image: image-url('new_activity.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center; 
