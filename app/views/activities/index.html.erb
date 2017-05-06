@@ -1,7 +1,25 @@
-<%- model_class = Activity -%>
-<div class="page-header">
-  <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %></h1>
+<div class="main-header">
+  <%= image_tag("unnamed.png", class: "main-logo")%>
 </div>
+
+<div class="main-background index-background">
+  <div class="main-title index-title">
+    <%=t '.title', default: "Tell us about your training" %>
+  </div>
+
+  <div class = "centered_div">
+    <%= link_to t('.new', default: "add new training"),
+              new_activity_path,
+              class: 'btn btn-primary btn-index-main btn-margin' %>
+  </div>
+</div>
+
+<div class="main-title small-title centered_div">
+  <%=t '.title', default: "What you achieved recently" %>
+</div>
+
+<%- model_class = Activity -%>
+<div class="training_container">
 <table class="table table-striped">
   <thead>
     <tr>
@@ -27,7 +45,4 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', default: t("helpers.links.new")),
-            new_activity_path,
-            class: 'btn btn-primary' %>
+</div>

@@ -26,6 +26,7 @@
 
 $background-color: #1F2421;
 $primary-color: #3BC14A;
+$training-color: #F8CB4D;
 
 
 html, body {
@@ -120,6 +121,8 @@ $main-header-height: 100px;
 $main-title-height: 200px;
 $form_element_width: 400px;
 $form_element_height: 60px;
+$main-background-height: 600px;
+$small-header-hight: 100px;
 
 .main-header {
   height: $main-header-height;
@@ -137,6 +140,59 @@ $form_element_height: 60px;
   color: white;
 }
 
+.training-title {
+  height: $main-title-height;
+  vertical-align: middle;
+  line-height: $main-title-height/2;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Slim Joe";
+  color: white;
+}
+
+
+
+.index-title {
+  font-family: "Big John";
+  color: $primary-color;
+}
+
+.sport-title {
+  height: $small-header-hight/2;
+  line-height: $small-header-hight/2;
+  font-family: "Josefin Sans";
+  color: white;
+  font-size: x-large;
+}
+
+.laps-title {
+  font-family: "Josefin Sans";
+  color: $training-color;
+  height: $small-header-hight;
+  line-height: $small-header-hight;
+  font-size: x-large;
+}
+
+.small-title {
+  height: $small-header-hight;
+  line-height: $small-header-hight;
+  font-family: "Slim Joe";
+  color: gray;
+  background-color: white;
+  font-size: xx-large;
+}
+
+.training_container {
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: $training-color;
+}
+
+.training_info {
+  height: 200px;
+}
+
 .main-container {
   margin: auto;
   align-content: center;
@@ -148,15 +204,23 @@ $form_element_height: 60px;
   height: $main-header-height/2;
 }
 
-.new-activity-background {
+.main-background {
   top: 0px;
-  background-image: image-url('new_activity.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center; 
   left: 0px;
   right: 0px;
-  height: 600px;
+  height:$main-background-height;
+}
+
+.new-activity-background {
+  background-image: image-url('new_activity.jpg');
+}
+
+.index-background {
+    background-position: center center; 
+  background-image: image-url('index.jpg');
 }
 
 
@@ -166,9 +230,12 @@ $form_element_height: 60px;
 }
 
 .btn {
-    margin-top: 100px;
     border-radius: 300px;
     font-size: 30px;
+}
+
+.btn-margin {
+      margin-top: 100px;
 }
 
 .btn-submit {
@@ -205,6 +272,16 @@ $form_element_height: 60px;
 
 .btn-xl {
   padding: 15px 30px;
+}
+
+.btn-index-main {
+  background-color: $primary-color;
+  color: white;
+}
+
+.btn-training {
+  color: white;
+  background-color: $training-color;
 }
 
 .main-curved {

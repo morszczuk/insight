@@ -2,7 +2,7 @@
   <%= image_tag("unnamed.png", class: "main-logo")%>
 </div>
 
-<div class="new-activity-background">
+<div class="main-background new-activity-background">
   <%- model_class = Activity -%>
   <div class="main-title">
     <%=t '.title', default: "Add new training", model: model_class.model_name.human.titleize %>

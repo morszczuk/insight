@@ -1,15 +1,25 @@
+<div class="main-header">
+  <%= image_tag("unnamed.png", class: "main-logo")%>
+</div>
+
+
 <%- model_class = Activity -%>
-<div class="page-header">
-  <h1><%=t '.title', default: model_class.model_name.human.titleize %></h1>
+
+<div class="training_container training_info">
+  <div class="training-title">
+    <%=t '.title', default: @activity.name, model: model_class.model_name.human.titleize %>
+    <div class="main-title sport-title">
+      <%=t '.title', default: @activity.sport, model: model_class.model_name.human.titleize %>
+    </div>
+  </div>
+</div>
+
+<div class="main-title laps-title centered_div">
+  <%=t '.title', default: "Laps" %>
 </div>
 
 <div class="fieldset">
   <dl>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
-      <dd><pre class="prettyprint"><%= @activity.name %></pre></dd>
-      <dt class="label label-default"><%= model_class.human_attribute_name(:sport) %></dt>
-      <dd><pre class="prettyprint"><%= @activity.sport %></pre></dd>
-      <dt class="label label-default">Laps</dt>
       <dd><pre class="prettyprint"></pre>
         <table class="table table-striped">
           <thead>
@@ -39,9 +49,10 @@
   </dl>
 </div>
 
-<div class="form-group">
+<%#<div class="form-group">%>
+<div class="centered_div">
   <%= link_to t('.back', default: t("helpers.links.back")),
-              activities_path, class: 'btn btn-default'  %>
+              activities_path, class: 'btn btn-default btn-training'  %>
   <%#<%= link_to t('.edit', default: t("helpers.links.edit")),
               edit_activity_path(@activity), class: 'btn btn-default' %>
   <%#<%= link_to t('.destroy', default: t("helpers.links.destroy")),%>
