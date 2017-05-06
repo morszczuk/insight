@@ -20,23 +20,15 @@
 
 <%- model_class = Activity -%>
 <div class="training_container">
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:sport) %></th>
-      <th>Number of laps</th>
-    </tr>
-  </thead>
+<table>
   <tbody>
     <% @activities.each do |activity| %>
       <tr>
-        <td><%= activity.id %></td>
-          <td><%= activity.name %></td>
-          <td><%= activity.sport %></td>
-          <td><%= activity.laps.count %></td>
-        <td>
+        <td class="trainings"><%= activity.id %></td>
+        <td class="trainings"><%= activity.name %></td>
+        <td class="trainings"><%= activity.sport %></td>
+        <td class="trainings"><%= activity.laps.count %> laps</td>
+        <td class="trainings">
           <%= link_to activity_path(activity), class: 'btn btn-xs', title: "#{ t('.show', default: t('helpers.links.show')) }" do %>
             <%= glyph 'info-sign' %>
           <%- end -%>

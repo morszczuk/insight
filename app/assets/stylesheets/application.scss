@@ -323,3 +323,38 @@ $small-header-hight: 100px;
 .centered_div {
   margin: 0 auto; text-align: center;
 }
+
+table {  
+  border-spacing: 0 10px;
+  border-collapse: separate; 
+  padding-left: 100px;
+  padding-right: 100px;
+  width: 100%;
+}
+
+tr {
+  height: 50px;
+}
+
+$table-radius: 300px;
+td:first-child { 
+  border-top-left-radius: $table-radius; 
+  border-bottom-left-radius: $table-radius; 
+  border-left: solid 1px gray;
+}
+td:last-child { 
+  border-top-right-radius: $table-radius; 
+  border-bottom-right-radius: $table-radius; 
+  border-right: solid 1px gray;
+}
+
+td.trainings { 
+  background-color: $training-color;
+  color: white;
+  font-size: x-large;
+  text-align:center; 
+  line-height: 50px;
+  vertical-align:middle;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+}
