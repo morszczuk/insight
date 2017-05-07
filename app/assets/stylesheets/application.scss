@@ -234,6 +234,21 @@ $small-header-hight: 100px;
     font-size: 30px;
 }
 
+.details-btn {
+  margin: 5px;
+  background-color: white;
+  color: $training-color;
+  border-radius: 300px;
+  font-size: 20px;
+  padding: 5px;
+
+  &:hover {
+      background-color: $background-color;
+      color: $primary-color;
+      text-decoration: none;
+  }
+}
+
 .btn-margin {
       margin-top: 100px;
 }
@@ -324,7 +339,7 @@ $small-header-hight: 100px;
   margin: 0 auto; text-align: center;
 }
 
-table {  
+table.main-table {  
   border-spacing: 0 10px;
   border-collapse: separate; 
   padding-left: 100px;
@@ -332,29 +347,56 @@ table {
   width: 100%;
 }
 
-tr {
+tr.main-table {
   height: 50px;
 }
 
 $table-radius: 300px;
-td:first-child { 
+td.main-table:first-child, th.main-table:first-child { 
   border-top-left-radius: $table-radius; 
   border-bottom-left-radius: $table-radius; 
-  border-left: solid 1px gray;
-}
-td:last-child { 
-  border-top-right-radius: $table-radius; 
-  border-bottom-right-radius: $table-radius; 
-  border-right: solid 1px gray;
+  border-left: solid 1px white;
 }
 
-td.trainings { 
-  background-color: $training-color;
-  color: white;
+th.header_table:first-child {
+  border-left: solid 1px $primary-color;
+}
+
+
+td.main-table:last-child, th.main-table:last-child { 
+  border-top-right-radius: $table-radius; 
+  border-bottom-right-radius: $table-radius; 
+  border-right: solid 1px white;
+}
+
+th.header_table:last-child {
+  border-right: solid 1px $primary-color;
+}
+
+td.main-table, th.main-table {
   font-size: x-large;
   text-align:center; 
   line-height: 50px;
   vertical-align:middle;
-  border-top: solid 1px gray;
-  border-bottom: solid 1px gray;
+}
+
+.trainings_table {
+    background-color: $training-color;
+    color: white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+.training_table {
+    background-color: $primary-color;
+    color: white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+.header_table {
+    background-color: white;
+    color: $primary-color;
+    border-top: solid 1px $primary-color;
+    border-bottom: solid 1px $primary-color;
 }

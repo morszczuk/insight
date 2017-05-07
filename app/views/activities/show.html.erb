@@ -18,36 +18,31 @@
   <%=t '.title', default: "Laps" %>
 </div>
 
-<div class="fieldset">
-  <dl>
-      <dd><pre class="prettyprint"></pre>
-        <table class="table table-striped">
+        <table class="main-table">
           <thead>
-            <tr>
-              <th>Id</th>
-              <th>Start time</th>
-              <th>Total time (in seconds)</th>
-              <th>Distance (in meters)</th>
-              <th>Maximum speed</th>
-              <th>Intensity</th>
+            <tr class="main-table">
+              <th class="main-table header_table">Id</th>
+              <th class="main-table header_table">Start time</th>
+              <th class="main-table header_table">Total time (in seconds)</th>
+              <th class="main-table header_table">Distance (in meters)</th>
+              <th class="main-table header_table">Maximum speed</th>
+              <th class="main-table header_table">Intensity</th>
             </tr>
           </thead>
           <tbody>
             <% @activity.laps.each do |lap| %>
-              <tr>
-                <td><%= lap.id %></td>
-                <td><%= lap.start_time %></td>
-                <td><%= lap.lap_summary.total_time_seconds %></td>
-                <td><%= lap.lap_summary.distance_meters %></td>
-                <td><%= lap.lap_summary.maximum_speed %></td>
-                <td><%= lap.lap_summary.intensity %></td>
+              <tr class="main-table">
+                <td class="main-table training_table"><%= lap.id %></td>
+                <td class="main-table training_table"><%= lap.start_time %></td>
+                <td class="main-table training_table"><%= lap.lap_summary.total_time_seconds %></td>
+                <td class="main-table training_table"><%= lap.lap_summary.distance_meters %></td>
+                <td class="main-table training_table"><%= lap.lap_summary.maximum_speed %></td>
+                <td class="main-table training_table"><%= lap.lap_summary.intensity %></td>
               </tr>
             <% end %>
           </tbody>
         </table>
-      </dd>
-  </dl>
-</div>
+
 
 <%#<div class="form-group">%>
 <div class="centered_div">
