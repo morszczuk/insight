@@ -1,24 +1,7 @@
-# README
+# insight
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Description
+Activity tracker with the functionality of writing your own quieres using R lang using parsed data.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Website
+App is available here: https://safe-depths-80071.herokuapp.com/
